@@ -53,7 +53,7 @@ module.exports = function (content) {
   source = start + partials.filter(function (partial) {
     return config.styles[partial];
   }).map(function (partial) {
-    return "@import \"~bootstrap-sass/assets/stylesheets/bootstrap/" + partial;
+    return "@import \"~bootstrap-sass/assets/stylesheets/bootstrap/" + partial + "\";";
   }).join("\n");
   return source;
 }
